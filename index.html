@@ -218,8 +218,8 @@
   }
   .modal-overlay.active{ display:flex; }
   .modal-box{
-    background:var(--panel2); border:1.3px solid var(--limedim); border-radius:20px;
-    padding:22px; max-width:400px; width:100%;
+    background:var(--panel2); border:1.5px solid var(--limedim); border-radius:22px;
+    padding:30px; max-width:460px; width:100%;
   }
 
   /* ---------- graph readout ---------- */
@@ -365,25 +365,11 @@
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4FF3D" stroke-width="2"><path d="M12 2a5 5 0 0 1 5 5c0 3-2 4-2 7h-6c0-3-2-4-2-7a5 5 0 0 1 5-5z"/><path d="M9 17h6M10 20h4"/></svg>
     </div>
   </div>
-  <div class="wordmark">OPENCARE // SESSION</div>
-
-  <div class="content">
-
-  <!-- persistent HUD header -->
-  <div class="hud-header">
-    <div class="hud-dials">
-      <svg class="hud-dial" viewBox="0 0 26 26"><circle cx="13" cy="13" r="10" fill="none" stroke="#7C9126" stroke-width="1.2"/><circle cx="13" cy="13" r="10" fill="none" stroke="#D4FF3D" stroke-width="1.6" stroke-dasharray="63" stroke-dashoffset="20" stroke-linecap="round"/><circle cx="13" cy="13" r="2" fill="#D4FF3D"/></svg>
-      <svg class="hud-dial" viewBox="0 0 26 26"><circle cx="13" cy="13" r="10" fill="none" stroke="#544C86" stroke-width="1.2"/><circle cx="13" cy="13" r="10" fill="none" stroke="#9B8AFB" stroke-width="1.6" stroke-dasharray="63" stroke-dashoffset="40" stroke-linecap="round"/><circle cx="13" cy="13" r="2" fill="#9B8AFB"/></svg>
-    </div>
-    <div class="hud-wave"><svg viewBox="0 0 120 22" width="100%" height="100%" preserveAspectRatio="none" id="header-wave"><polyline fill="none" stroke="#FF9ECF" stroke-width="1.4" points=""/></svg></div>
-    <div class="hud-badge">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4FF3D" stroke-width="2"><path d="M12 2a5 5 0 0 1 5 5c0 3-2 4-2 7h-6c0-3-2-4-2-7a5 5 0 0 1 5-5z"/><path d="M9 17h6M10 20h4"/></svg>
-    </div>
-  </div>
   <div class="wordmark">OPENCARE // REHAB POD</div>
 
   <div class="content">
 
+    <!-- ===================== BACKGROUND CHOICE ===================== -->
     <!-- ===================== BACKGROUND CHOICE ===================== -->
     <div class="screen active" id="screen-bgchoice">
       <div class="panel accent-lime">
@@ -557,8 +543,20 @@
 <!-- welcome-back popup -->
 <div class="modal-overlay" id="welcome-modal">
   <div class="modal-box">
-    <h1 class="heading" style="font-size:18px;" id="welcome-text"></h1>
-    <button class="btn btn-lime" id="welcome-yes" style="margin-top:6px;">Yes, begin scan</button>
+    <span class="panel-tag lime" style="position:static;display:inline-block;margin-bottom:12px;">Stress History</span>
+    <svg viewBox="0 0 300 110" width="100%" height="110" style="display:block;margin-bottom:20px;">
+      <defs>
+        <linearGradient id="bellFill" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#D4FF3D" stop-opacity="0.35"/>
+          <stop offset="1" stop-color="#D4FF3D" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      <path d="M0,100 C40,100 55,20 100,15 C130,12 140,60 150,62 C160,60 170,12 200,15 C245,20 260,100 300,100 Z" fill="url(#bellFill)"/>
+      <path d="M0,100 C40,100 55,20 100,15 C130,12 140,60 150,62 C160,60 170,12 200,15 C245,20 260,100 300,100" fill="none" stroke="#D4FF3D" stroke-width="2"/>
+      <line x1="0" y1="100" x2="300" y2="100" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+    </svg>
+    <h1 class="heading" style="font-size:22px;" id="welcome-text"></h1>
+    <button class="btn btn-lime" id="welcome-yes" style="margin-top:16px;">Yes, begin scan</button>
   </div>
 </div>
 
